@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SchoolProject_KTK_CAW">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="jstl-1.2_2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jstl-1.2_2/jstl-1.2_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.18.0_2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-io-2.18.0_2/commons-io-2.18.0_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakartaee-migration-1.0.9-shaded.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jakartaee-migration-1.0.9-shaded/jakartaee-migration-1.0.9-shaded">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cos_2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/cos_2/cos_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-fileupload-1.5_2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-fileupload-1.5_2/commons-fileupload-1.5_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="SchoolProject_KTK_CAW"/>
+        <property name="java-output-path" value="/SchoolProject_KTK_CAW/build/classes"/>
+    </wb-module>
+</project-modules>

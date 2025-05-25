@@ -1,0 +1,16 @@
+@charset "EUC-KR";
+
+
+.ListBlock{
+	border: 1px solid black;
+	display: grid;
+  grid-auto-flow: column;  /* 열(column) 단위로 자동 배치 */
+  grid-auto-columns: 150px; /* 각 열 너비 지정 */
+  grid-template-rows: repeat(auto-fill, 50px); /* 각 행 높이 지정 */
+  gap: 10px; /* 간격 */
+};
+
+/* 개별 상품 박스*/
+.List{
+	border: 1px solid black;
+};
