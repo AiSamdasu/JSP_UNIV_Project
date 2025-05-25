@@ -15,7 +15,14 @@
     
 </head>
 <body>
-<jsp:include page="layout/Nav.jsp">
+<jsp:include page="layout/header.jsp">
+<%
+    String productCodeParam = request.getParameter("ProductCode");
+    int productCode = Integer.parseInt(productCodeParam);  // 문자열을 정수로 변환
+
+    pointProductRepository dao = pointProductRepository.getInstance();
+    PointProduct pointProduct = dao.getPointProductById(productCode);
+%>
 
 <div class='ListBlock'>
 	<div class='List'>
