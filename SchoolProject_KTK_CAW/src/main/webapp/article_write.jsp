@@ -14,6 +14,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 <!-- 유효성 검사를 위한 script -->
 <script type="text/javascript" src="./resources/js/validation.js"></script>
+
+<!-- 다국어 처리를 위한 import -->
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <link rel="canonical"
 	href="https://getbootstrap.kr/docs/5.3/examples/checkout/">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -116,6 +121,11 @@
 }
 </style>
 </head>
+<fmt:setLocale value='<%=request.getParameter("language") %>' />
+
+<fmt:bundle basename="bundle.message">
+
+
 <body class="bg-body-tertiary">
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol
 			id="check2" viewBox="0 0 16 16"> <path
@@ -134,44 +144,53 @@
 			<div class="row g-5 py-5">
 			
 				<div class="py-5">
-					<h4 class="mb-3">게시글 작성</h4>
+				<!-- 게시글 작성 h -->
+					<h4 class="mb-3"><fmt:message key="article_write"/></h4>
+					<div class="text-end">
+						<a href="?language=ko">Korean</a> | <a href="?language=en">English</a> 
+					</div>
 
 					<!-- 게시글 작성 form -->
 					<form name="newArticle" action="./processAddArticle.jsp" method="post" enctype="multipart/form-data">
 						<div class="row g-3">
 							
+							<!-- 제목 -->
 							<div class="col-12">
-							
-								<label for="title" class="form-label">제목 </label> 
+								<label for="title" class="form-label"><fmt:message key="article_title"/></label> 
 								<!-- 유효성 검사를 위한 id= -->
+								<!-- 다국어 처리를 위한 value= -->
 								<input
-									type="text" id="title" name="title" class="form-control" placeholder="제목">
+									type="text" id="title" value="<fmt:message key="article_title"/>" name="title" class="form-control" placeholder="제목">
 							</div>
 						</div>
 						<hr class="my-4">
+						
+						<!-- 아이디 -->
 						<div class="col-12">
-								<label for="articleId" class="form-label">아이디 </label> 
+								<label for="articleId" class="form-label"><fmt:message key="article_Id"/> </label> 
 								<input
-									type="text" id="articleId" name="articleId" class="form-control" placeholder="articleId">
+									type="text" id="articleId" value="<fmt:message key="article_Id"/>"name="articleId" class="form-control" placeholder="articleId">
 							</div>
 						
-						
+						<!-- 이미지 -->
 						<div class="col-12">
-								<label for="description" class="form-label">이미지 </label> 
+								<label for="description" class="form-label"><fmt:message key="article_image"/></label> 
 								<input
-									type="file" id="ArticleImage" name="ArticleImage" class="form-control">
+									type="file" id="ArticleImage" value="<fmt:message key="article_image"/>" name="ArticleImage" class="form-control">
 							</div>
 						
+						<!-- 내용 -->
 						<div class="col-12">
-								<label for="description" class="form-label">내용 </label> 
+								<label for="description" class="form-label"><fmt:message key="article_description"/></label> 
 								<input
-									type="text" id="description" name="description" class="form-control" placeholder="내용">
+									type="text" id="description" value="<fmt:message key="article_description"/>"name="description" class="form-control" placeholder="내용">
 							</div>
 							
 							
 						<hr class="my-4">
-						<!-- 유효성검사 -->
-						<input class="w-100 btn btn-primary btn-lg" type="button" value="게시글 업로드" onclick="CheckAddArticle()">
+						<!-- 업로드 버튼 -->
+						<!-- 유효성검사 onclick -->
+						<input class="w-100 btn btn-primary btn-lg" type="button" value="<fmt:message key="article_upload"/>" onclick="CheckAddArticle()">
 						
 					</form>
 				</div>
@@ -179,6 +198,7 @@
 		</main>
 		
 	</div>
+	</fmt:bundle>
 	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
 		class="astro-vvvwv3sm"></script>

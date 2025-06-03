@@ -7,7 +7,6 @@
 <%@ page import="com.oreilly.servlet.*" %>
 <%@ page import="com.oreilly.servlet.multipart.*" %>
 
-
 <%
 	request.setCharacterEncoding("UTF-8");
 
