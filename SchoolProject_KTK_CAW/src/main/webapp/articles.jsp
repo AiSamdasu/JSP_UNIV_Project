@@ -16,6 +16,7 @@
 	content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Astro v5.7.10">
 <title>articles</title>
+<!-- 이미지 추가 -->
 
 <link rel="canonical"
 	href="https://getbootstrap.kr/docs/5.3/examples/album/">
@@ -131,46 +132,7 @@
 			id="sun-fill" viewBox="0 0 16 16"> <path
 			d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path> </symbol> </svg>
 	
-	<div class="container">
-		<header class="border-bottom lh-1 py-3">
-			<div
-				class="row flex-nowrap justify-content-between align-items-center">
-				<div class="col-4 pt-1">
-					<a class="link-secondary" href="#">Subscribe</a>
-				</div>
-				<div class="col-4 text-center">
-					<a class="blog-header-logo text-body-emphasis text-decoration-none"
-						href="#">Large</a>
-				</div>
-				<div class="col-4 d-flex justify-content-end align-items-center">
-					<a class="link-secondary" href="#" aria-label="Search"> <svg
-							xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-							fill="none" stroke="currentColor" stroke-linecap="round"
-							stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-							viewBox="0 0 24 24">
-							<title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle>
-							<path d="M21 21l-5.2-5.2"></path></svg>
-					</a> <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-				</div>
-			</div>
-		</header>
-		<div class="nav-scroller py-1 mb-3 border-bottom">
-			<nav class="nav nav-underline justify-content-between">
-				<a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">U.S.</a> <a
-					class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Style</a> <a
-					class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
-			</nav>
-		</div>
-	</div>
+	<jsp:include page="/layout/header.jsp" />
 	<main>
 		<section class="py-5 text-center container">
 			<!-- 검색하기 기능 -->
@@ -196,13 +158,7 @@
 					<!-- 게시글 하나씩 출력 -->
 					<div class="col">
 						<div class="card shadow-sm">
-							<svg aria-label="Placeholder: Thumbnail"
-								class="bd-placeholder-img card-img-top" height="225"
-								preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-								xmlns="http://www.w3.org/2000/svg">
-								<title>이미지</title><rect width="100%" height="100%"
-									fill="#55595c"></rect>
-								<text x="50%" y="50%" fill="#eceeef" dy=".3em">이미지</text></svg>
+								<img src="./resources/images/<%=article.getFilename() %>" style="width:100%; height:100%"/>
 							<div class="card-body">
 								<p class="card-text"><h5><b><%=article.getTitle() %></b></h5>
 								<p class="card-text"><%=article.getDescription()%></p>

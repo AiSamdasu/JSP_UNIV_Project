@@ -19,9 +19,11 @@ public class ArticleRepository {
 		Article article1=new Article("제목1","작성자");
 		article1.setDescription("이것은 본문의 내용입니다.");
 		article1.setArticleId("1");
+		article1.setFilename("1.jpg");
 		Article article2=new Article("제목2","작성자");
 		article2.setDescription("이것은 본문의 내용입니다.");
 		article2.setArticleId("2");
+		article2.setFilename("2.jpg");
 		// 리스트에 추가
 		listOfArticles.add(article1);
 		listOfArticles.add(article2);
