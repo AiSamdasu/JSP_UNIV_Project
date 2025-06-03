@@ -6,6 +6,13 @@ import dto.Article;
 public class ArticleRepository {
 
 	private ArrayList<Article> listOfArticles= new ArrayList<Article>();
+	// addArticle
+	private static ArticleRepository instance= new ArticleRepository();
+	
+	
+	public static ArticleRepository getInstance() {
+		return instance;
+	}
 	
 	//자바 빈즈로 사용할 게시글 데이터 접근 클래스
 	public ArticleRepository() {
@@ -37,5 +44,10 @@ public class ArticleRepository {
 			}
 		}
 		return articleById;
+	}
+	
+	// addArticle
+	public void addArticle(Article article) {
+		listOfArticles.add(article);
 	}
 }

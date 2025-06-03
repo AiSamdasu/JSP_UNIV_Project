@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!-- 도서 상세 정보 데이터를 불러오기 위한 -->
 <%@ page import="dto.Article" %>
+<%@ page import="dao.ArticleRepository" %>
 <jsp:useBean id="articleDAO" class="dao.ArticleRepository" scope="session"/>
 
 
@@ -189,7 +190,8 @@
 		<!-- 게시글 상세 보기 데이터 -->
 		<% 
 			String id = request.getParameter("id");
-			Article article=articleDAO.getArticleById(id); //여기 임시 아이디 고정
+			ArticleRepository dao= ArticleRepository.getInstance();//새로 쓴 게시글 가져오기
+			Article article=dao.getArticleById(id); //여기 임시 아이디 고정
 		%>
 		<div class="row g-5">
 			<div class="col-md-8">

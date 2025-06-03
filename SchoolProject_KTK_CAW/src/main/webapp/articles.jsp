@@ -3,6 +3,7 @@
 <!-- ch4 게시글 목록 출력을 위한 -->
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Article" %>
+<%@ page import="dao.ArticleRepository" %>
 <jsp:useBean id="articleDAO" class="dao.ArticleRepository" scope="session"/>
 
 <!DOCTYPE html>
@@ -178,7 +179,9 @@
 		
 		<!-- 게시글 모음집 -->
 		<%
-			ArrayList<Article> listOfArticles=articleDAO.getAllArticles();
+			// 새로쓴 게시글도 가져오기
+			ArticleRepository dao=ArticleRepository.getInstance();
+			ArrayList<Article> listOfArticles=dao.getAllArticles();
 		
 		%>
 		
