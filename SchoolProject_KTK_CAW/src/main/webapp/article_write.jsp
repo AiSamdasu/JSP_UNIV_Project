@@ -12,7 +12,8 @@
 <meta name="generator" content="Astro v5.7.10">
 <title>article_write</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-
+<!-- 유효성 검사를 위한 script -->
+<script type="text/javascript" src="./resources/js/validation.js"></script>
 <link rel="canonical"
 	href="https://getbootstrap.kr/docs/5.3/examples/checkout/">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -140,34 +141,38 @@
 						<div class="row g-3">
 							
 							<div class="col-12">
+							
 								<label for="title" class="form-label">제목 </label> 
+								<!-- 유효성 검사를 위한 id= -->
 								<input
-									type="text" name="title" class="form-control" placeholder="제목">
+									type="text" id="title" name="title" class="form-control" placeholder="제목">
 							</div>
 						</div>
 						<hr class="my-4">
 						<div class="col-12">
 								<label for="articleId" class="form-label">아이디 </label> 
 								<input
-									type="text" name="articleId" class="form-control" placeholder="articleId">
+									type="text" id="articleId" name="articleId" class="form-control" placeholder="articleId">
 							</div>
 						
 						
 						<div class="col-12">
 								<label for="description" class="form-label">이미지 </label> 
 								<input
-									type="file" name="ArticleImage" class="form-control">
+									type="file" id="ArticleImage" name="ArticleImage" class="form-control">
 							</div>
 						
 						<div class="col-12">
 								<label for="description" class="form-label">내용 </label> 
 								<input
-									type="text" name="description" class="form-control" placeholder="내용">
+									type="text" id="description" name="description" class="form-control" placeholder="내용">
 							</div>
 							
 							
 						<hr class="my-4">
-						<button class="w-100 btn btn-primary btn-lg" type="submit">게시글 업로드</button>
+						<!-- 유효성검사 -->
+						<input class="w-100 btn btn-primary btn-lg" type="button" value="게시글 업로드" onclick="CheckAddArticle()">
+						
 					</form>
 				</div>
 			</div>
