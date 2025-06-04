@@ -17,5 +17,6 @@
 		<p> <a href="articles.jsp">게시글 목록으로 돌아가기 &raquo;</a>
 	</div>
 	
+	<jsp:include page="/layout/footer.jsp" />
 </body>
 </html>
