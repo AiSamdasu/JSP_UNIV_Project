@@ -7,6 +7,8 @@
 <%@ page import="com.oreilly.servlet.*" %>
 <%@ page import="com.oreilly.servlet.multipart.*" %>
 
+
+
 <%
 	request.setCharacterEncoding("UTF-8");
 
@@ -22,6 +24,11 @@
 	String title=multi.getParameter("title");
 	String description=multi.getParameter("description");
 	String recipe=multi.getParameter("recipe");
+	int spicy=Integer.parseInt(multi.getParameter("spicy"));
+	int sweet=Integer.parseInt(multi.getParameter("sweet"));
+	int salty=Integer.parseInt(multi.getParameter("salty"));
+	int savory=Integer.parseInt(multi.getParameter("savory"));
+	int umami=Integer.parseInt(multi.getParameter("umami"));
 	
 	Enumeration files= multi.getFileNames();
 	String fname=(String)files.nextElement();
@@ -34,7 +41,13 @@
 	newArticle.setTitle(title);
 	newArticle.setDescription(description);
 	newArticle.setFilename(fileName);
-	newArticle.setRecipe(recipe);
+	newArticle.setRecipe(recipe.replace("\n", "<br/>"));
+	newArticle.setSpicy(spicy);
+	newArticle.setSweet(sweet);
+	newArticle.setSalty(salty);
+	newArticle.setSavory(savory);
+	newArticle.setUmami(umami);
+
 	
 	dao.addArticle(newArticle);
 	

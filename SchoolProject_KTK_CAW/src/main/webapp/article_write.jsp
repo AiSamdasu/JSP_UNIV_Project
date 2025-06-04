@@ -68,10 +68,29 @@
 						<!-- 본문 레시피 -->
 						<div class="col-12">
 								<label for="description" class="form-label"><fmt:message key="article_recipe"/></label> 
-								<input
-									type="text" id="recipe" name="recipe" class="form-control">
+								
+									<textarea  id="recipe" name="recipe" class="form-control" rows="6" style="resize: vertical;" placeholder="레시피 내용을 입력하세요..."></textarea>
 							</div>
 							
+							<hr>
+							
+							<!-- 맛분류 -->
+							<h5><fmt:message key="article_classification"/></h5>
+							<!-- 매운맛 -->
+							<label for="spicy" class="form-label"><fmt:message key="article_spicy"/></label>
+							<input type="range" name="spicy" class="form-range" min="0" max="5" id="spicy">
+							<!-- 단맛 -->
+							<label for="sweet" class="form-label"><fmt:message key="article_sweet"/></label>
+							<input type="range" name="sweet" class="form-range" min="0" max="5" id="sweet">
+							<!-- 짠맛 -->
+							<label for="salty" class="form-label"><fmt:message key="article_salty"/></label>
+							<input type="range" name="salty" class="form-range" min="0" max="5" id="salty">
+							<!-- 고소한맛 -->
+							<label for="savory" class="form-label"><fmt:message key="article_savory"/></label>
+							<input type="range" name="savory" class="form-range" min="0" max="5" id="savory">
+							<!-- 감칠맛 -->
+							<label for="umami" class="form-label"><fmt:message key="article_umami"/></label>
+							<input type="range" name="umami" class="form-range" min="0" max="5" id="umami">
 							
 						<hr class="my-4">
 						<!-- 업로드 버튼 -->

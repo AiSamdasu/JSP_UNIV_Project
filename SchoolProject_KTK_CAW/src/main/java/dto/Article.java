@@ -19,6 +19,12 @@ public class Article implements Serializable {
 	private String date;
 	private int like; //좋아요 갯수
 	private int like_article_quantity; // 좋아요 누른 게시글
+	//맛분류
+	private int spicy;
+	private int sweet;
+	private int salty;
+	private int savory;
+	private int umami;
 	
 
 	public Article() {
@@ -117,6 +123,46 @@ public class Article implements Serializable {
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public int getSpicy() {
+		return spicy;
+	}
+
+	public void setSpicy(int spicy) {
+		this.spicy = spicy;
+	}
+
+	public int getSweet() {
+		return sweet;
+	}
+
+	public void setSweet(int sweet) {
+		this.sweet = sweet;
+	}
+
+	public int getSalty() {
+		return salty;
+	}
+
+	public void setSalty(int salty) {
+		this.salty = salty;
+	}
+
+	public int getSavory() {
+		return savory;
+	}
+
+	public void setSavory(int savory) {
+		this.savory = savory;
+	}
+
+	public int getUmami() {
+		return umami;
+	}
+
+	public void setUmami(int umami) {
+		this.umami = umami;
 	}
 
 

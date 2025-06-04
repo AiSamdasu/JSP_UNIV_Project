@@ -38,39 +38,83 @@
 						<%=article.getDate() %> | <a href="#"><%=article.getUser() %></a>  <!-- 사용자 링크 -->
 					</p>
 					<hr>
-					
+				
 					<table class="table">
 						<thead>
+						
 							<tr>
-								<th>Name</th>
-								<th>Upvotes</th>
-								<th>Downvotes</th>
+								<th>분류</th>
+								<th>정도</th>
 							</tr>
 						</thead>
 						<tbody>
+						<% if(article.getSpicy()!=0){ %>
 							<tr>
-								<td>Alice</td>
-								<td>10</td>
-								<td>11</td>
+								<td>매운맛</td>
+								<td><% for(int i=0;i<article.getSpicy();i++){%>
+								🟨
+								<%} 
+								for(int j=5-article.getSpicy();j>0;j--){
+								%>▫️
+								<%} %>	
+								</td>
+						<%} %>
 							</tr>
+							
+							
+							<% if(article.getSweet()!=0){ %>
 							<tr>
-								<td>Bob</td>
-								<td>4</td>
-								<td>3</td>
+								<td>달콤한맛</td>
+								<td><% for(int i=0;i<article.getSweet();i++){%>
+								🟨
+								<%} 
+								for(int j=5-article.getSweet();j>0;j--){
+								%>▫️
+								<%} %>	
+								</td>
+						<%} %>
 							</tr>
+							
+							<% if(article.getSalty()!=0){ %>
 							<tr>
-								<td>Charlie</td>
-								<td>7</td>
-								<td>9</td>
+								<td>짠맛</td>
+								<td><% for(int i=0;i<article.getSalty();i++){%>
+								🟨
+								<%} 
+								for(int j=5-article.getSalty();j>0;j--){
+								%>▫️
+								<%} %>	
+								</td>
+						<%} %>
+							</tr>
+							
+							<% if(article.getSavory()!=0){ %>
+							<tr>
+								<td>고소한맛</td>
+								<td><% for(int i=0;i<article.getSavory();i++){%>
+								🟨
+								<%} 
+								for(int j=5-article.getSavory();j>0;j--){
+								%>▫️
+								<%} %>	
+								</td>
+						<%} %>
+							</tr>
+							
+							<% if(article.getUmami()!=0){ %>
+							<tr>
+								<td>감칠맛</td>
+								<td><% for(int i=0;i<article.getUmami();i++){%>
+								🟨
+								<%} 
+								for(int j=5-article.getUmami();j>0;j--){
+								%>▫️
+								<%} %>	
+								</td>
+						<%} %>
 							</tr>
 						</tbody>
-						<tfoot>
-							<tr>
-								<td>Totals</td>
-								<td>21</td>
-								<td>23</td>
-							</tr>
-						</tfoot>
+						
 					</table>
 					
 					<hr>
