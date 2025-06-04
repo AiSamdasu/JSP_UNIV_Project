@@ -15,7 +15,7 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Astro v5.7.10">
-<title>articles</title>
+<title>article_search</title>
 <!-- css파일 -->
 <link rel="stylesheet" type="text/css" href="./resources/css/article.css">
 
@@ -68,7 +68,7 @@
 	<jsp:include page="/layout/header.jsp" />
 	<main>
 		<section class="py-5 text-center container">
-			모든 게시글을 한눈에!
+			검색 기능 추가하기
 		</section>
 		
 		<!-- 게시글 모음집 -->

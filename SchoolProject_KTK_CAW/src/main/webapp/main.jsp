@@ -61,60 +61,7 @@
 			d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
    </symbol> 
    </svg>
-   <!--
-	<div
-		class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-		<button
-			class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-			id="bd-theme" type="button" aria-expanded="false"
-			data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-			<svg class="bi my-1 theme-icon-active" aria-hidden="true">
-   <use href="#circle-half"></use>
-   </svg>
 
-			<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-		</button>
-		<ul class="dropdown-menu dropdown-menu-end shadow"
-			aria-labelledby="bd-theme-text">
-			<li>
-				<button type="button"
-					class="dropdown-item d-flex align-items-center"
-					data-bs-theme-value="light" aria-pressed="false">
-					<svg class="bi me-2 opacity-50" aria-hidden="true">
-    <use href="#sun-fill"></use>
-    </svg>
-					라이트
-					<svg class="bi ms-auto d-none" aria-hidden="true">
-<use href="#check2"></use>
-</svg>
-				</button>
-			</li>
-			<li>
-				<button type="button"
-					class="dropdown-item d-flex align-items-center"
-					data-bs-theme-value="dark" aria-pressed="false">
-					<svg class="bi me-2 opacity-50" aria-hidden="true">
- <use href="#moon-stars-fill"></use>
- </svg>
-					다크
-					<svg class="bi ms-auto d-none" aria-hidden="true">
-						<use href="#check2"></use></svg>
-				</button>
-			</li>
-			<li>
-				<button type="button"
-					class="dropdown-item d-flex align-items-center active"
-					data-bs-theme-value="auto" aria-pressed="true">
-					<svg class="bi me-2 opacity-50" aria-hidden="true">
-						<use href="#circle-half"></use></svg>
-					시스템
-					<svg class="bi ms-auto d-none" aria-hidden="true">
-						<use href="#check2"></use></svg>
-				</button>
-			</li>
-		</ul>
-	</div>
-	-->
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol
 			id="aperture" fill="none" stroke="currentColor"
 			stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -499,89 +446,7 @@
 	</main>
 	
 	
-	<div class="b-example-divider b-example-vr"></div>
-		<div class="flex-shrink-0 p-3" style="width: 280px;">
-			<a href="/"
-				class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-				<svg class="bi pe-none me-2" width="30" height="24"
-					aria-hidden="true">
-					<use xlink:href="#bootstrap"></use></svg> <span class="fs-5 fw-semibold">Collapsible</span>
-			</a>
-			<ul class="list-unstyled ps-0">
-				<li class="mb-1">
-					<button
-						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-						data-bs-toggle="collapse" data-bs-target="#home-collapse"
-						aria-expanded="true">Home</button>
-					<div class="collapse show" id="home-collapse">
-						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="mb-1">
-					<button
-						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-						data-bs-toggle="collapse" data-bs-target="#dashboard-collapse"
-						aria-expanded="false">Dashboard</button>
-					<div class="collapse" id="dashboard-collapse">
-						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="mb-1">
-					<button
-						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-						data-bs-toggle="collapse" data-bs-target="#orders-collapse"
-						aria-expanded="false">Orders</button>
-					<div class="collapse" id="orders-collapse">
-						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="border-top my-3"></li>
-				<li class="mb-1">
-					<button
-						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-						data-bs-toggle="collapse" data-bs-target="#account-collapse"
-						aria-expanded="false">Account</button>
-					<div class="collapse" id="account-collapse">
-						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-							<li><a href="#"
-								class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign
-									out</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</div>
+	
 	
 	<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
 		<p>

@@ -16,7 +16,7 @@
 <!-- CSs파일 -->
 <link rel="stylesheet" type="text/css" href="./resources/css/article.css">
 <!-- 유효성 검사를 위한 script -->
-<script type="text/javascript" src="./resources/js/validation.js"></script>
+<script type="text/javascript" src="./resources/script/validation.js"></script>
 
 <!-- 다국어 처리를 위한 import -->
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>

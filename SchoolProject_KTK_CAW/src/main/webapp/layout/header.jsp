@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,7 @@
 				</div>
 				<div class="col-4 text-center">
 					<a class="blog-header-logo text-body-emphasis text-decoration-none"
-						href="#">Large</a>
+						href="<c:url value='/main.jsp' />"><b>오늘의 레시피</b></a>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
 					<a class="link-secondary" href="#" aria-label="Search"> <svg
@@ -33,14 +35,12 @@
 		</header>
 		<div class="nav-scroller py-1 mb-3 border-bottom">
 			<nav class="nav nav-underline justify-content-between">
-				<a class="nav-item nav-link link-body-emphasis" href="#">목록1</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">목록2</a> <a
-					class="nav-item nav-link link-body-emphasis" href="#">목록3</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-				<a class="nav-item nav-link link-body-emphasis" href="#">Style</a> <a
-					class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
+				<a class="nav-item nav-link link-body-emphasis" href="<c:url value='/main.jsp' />">Home</a>
+				<a class="nav-item nav-link link-body-emphasis" href="<c:url value='/articles.jsp' />">Today Recipe</a> <a
+					class="nav-item nav-link link-body-emphasis" href="<c:url value='/article_search.jsp' />">Search</a>
+				<a class="nav-item nav-link link-body-emphasis" href="<c:url value='/pointList/pointList.jsp' />">Point Store</a>
+				<a class="nav-item nav-link link-body-emphasis" href="<c:url value='/article_write.jsp' />">Add Recipe</a>
+				<a class="nav-item nav-link link-body-emphasis" href="<c:url value='/userPage.jsp' />">My Recipe</a>
 			</nav>
 		</div>
 	</div>
