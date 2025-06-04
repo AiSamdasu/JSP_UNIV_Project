@@ -20,36 +20,7 @@
 <body>
 	<jsp:include page="/layout/header.jsp" />
 	
-	<main>
-		<section class="py-5 text-center container">
-		
-			
-				<div class="col-lg-6 col-md-8 mx-auto">
-					<p class="lead text-body-secondary"> 회원 정보란
-					<div class="col-lg-4">
-					<svg aria-label="Placeholder"
-						class="bd-placeholder-img rounded-circle" height="140"
-						preserveAspectRatio="xMidYMid slice" role="img" width="140"
-						xmlns="http://www.w3.org/2000/svg">
-						<title>Placeholder</title><rect width="100%" height="100%"
-							fill="var(--bs-secondary-color)"></rect></svg>
-					<h2 class="fw-normal">회원 이름</h2>
-					<p>회원 소개</p>
-					<p>
-						<a class="btn btn-secondary" href="#">View details &raquo;</a>
-					</p>
-				</div>	
-					<p>
-						<a href="#" class="btn btn-primary my-2">Main call to action</a> <a
-							href="#" class="btn btn-secondary my-2">Secondary action</a>
-					</p>
-				</div>
-				
-	
-		</section>
-		
-		
-		<%
+	<%
 		int sum=0;
 		ArrayList<Article> likelist=(ArrayList<Article>)session.getAttribute("likelist");
 		if (likelist == null) {
@@ -58,10 +29,37 @@
 
 
 	%>
-	<p>좋아요한 게시글 수: <%=likelist.size()%></p>
+	
+	<main>
+		<section class="py-5 text-center container">
+		
+				<div class="col-lg-6 col-md-8 mx-auto">
+					
+					<svg aria-label="Placeholder"
+						class="bd-placeholder-img rounded-circle" height="140"
+						preserveAspectRatio="xMidYMid slice" role="img" width="140"
+						xmlns="http://www.w3.org/2000/svg">
+						<title>Placeholder</title><rect width="100%" height="100%"
+							fill="var(--bs-secondary-color)"></rect></svg>
+							<h2 class="fw-normal">회원 이름</h2>
+							<p> 회원소개</p>
+
+						<a class="btn btn-secondary" href="#">좋아요 누른 레시피</a>
+						<a href="#" class="btn btn-primary my-2">내가 쓴 레시피</a> 
+						<a href="#" class="btn btn-secondary my-2">관리자 페이지</a>
+
+				</div>
+		</section>
+		
+		
+		
+	
 	
 		<div class="album py-5 bg-body-tertiary">
+		
 			<div class="container">
+			<p class="lead text-center "> 좋아요한 게시글 수: <%=likelist.size()%>
+			<p>
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 					<%
 						for(int i=0;i<likelist.size();i++){

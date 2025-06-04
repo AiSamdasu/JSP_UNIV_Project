@@ -44,5 +44,7 @@ List<PointProduct> pointProducts = dao.getAllProducts();
 
 
 	<jsp:include page="../pointList/Pointmodal.jsp" />
+	
+	<jsp:include page="/layout/footer.jsp" />
 </body>
 </html>

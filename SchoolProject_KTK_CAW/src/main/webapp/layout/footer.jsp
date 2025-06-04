@@ -9,8 +9,8 @@
 <body>
 <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
 		<p>
-			Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a>
-			by <a href="https://x.com/mdo">@mdo</a>.
+			[2025] UNIV_JSP_project<br>
+			2023216023 김태규 | 2023216118 최아원
 		</p>
 		<p class="mb-0">
 			<a href="#">Back to top</a>

@@ -31,7 +31,9 @@
 	
 	<main>
 		<section class="py-5 text-center container">
-			게시글 검색 기능 여기에 추가하기
+			<form class="w-100 me-3" role="search">
+				<input type="search" class="form-control" placeholder="Search ... " aria-label="Search">
+			</form>
 		</section>
 		
 		<!-- 게시글 모음집 -->

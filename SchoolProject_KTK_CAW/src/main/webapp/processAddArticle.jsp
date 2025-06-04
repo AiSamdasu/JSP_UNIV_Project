@@ -20,8 +20,8 @@
 	MultipartRequest multi=new MultipartRequest(request,realFolder,maxSize,encType, new DefaultFileRenamePolicy());
 	
 	String title=multi.getParameter("title");
-	String articleId=multi.getParameter("articleId");
 	String description=multi.getParameter("description");
+	String recipe=multi.getParameter("recipe");
 	
 	Enumeration files= multi.getFileNames();
 	String fname=(String)files.nextElement();
@@ -32,9 +32,9 @@
 	
 	Article newArticle=new Article();
 	newArticle.setTitle(title);
-	newArticle.setArticleId(articleId);
 	newArticle.setDescription(description);
 	newArticle.setFilename(fileName);
+	newArticle.setRecipe(recipe);
 	
 	dao.addArticle(newArticle);
 	

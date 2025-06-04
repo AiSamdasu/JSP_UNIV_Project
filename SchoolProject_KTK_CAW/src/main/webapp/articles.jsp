@@ -30,9 +30,6 @@
 	<jsp:include page="/layout/header.jsp" />
 	
 	<main>
-		<section class="py-5 text-center container">
-			모든 게시글을 한눈에!
-		</section>
 		
 		<!-- 게시글 모음집 -->
 		<%

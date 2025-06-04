@@ -16,8 +16,8 @@ public class ArticleRepository {
 	
 	//자바 빈즈로 사용할 게시글 데이터 접근 클래스
 	public ArticleRepository() {
-		Article article1=new Article("제목1","작성자");
-		article1.setDescription("이것은 본문의 내용입니다.");
+		Article article1=new Article("토마토 파스타","파스타장인");
+		article1.setDescription("집에서도 고급스러운 파스타 만들기!");
 		article1.setArticleId("1");
 		article1.setFilename("1.jpg");
 		Article article2=new Article("제목2","작성자");

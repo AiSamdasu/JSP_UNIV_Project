@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page %>
+<%@ page import="java.util.Date , java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 <head>
@@ -44,17 +44,19 @@
 								<!-- 유효성 검사를 위한 id= -->
 								<!-- 다국어 처리를 위한 value= -->
 								<input
-									type="text" id="title" value="<fmt:message key="article_title"/>" name="title" class="form-control" placeholder="제목">
+									type="text" id="title"  name="title" class="form-control">
 							</div>
 						</div>
 						<hr class="my-4">
 						
-						<!-- 아이디 -->
+						
+						<!-- 음식에 대한 한줄평 -->
 						<div class="col-12">
-								<label for="articleId" class="form-label"><fmt:message key="article_Id"/> </label> 
+								<label for="description" class="form-label"><fmt:message key="article_description"/></label> 
 								<input
-									type="text" id="articleId" value="<fmt:message key="article_Id"/>"name="articleId" class="form-control" placeholder="articleId">
+									type="text" id="description" name="description" class="form-control">
 							</div>
+						
 						
 						<!-- 이미지 -->
 						<div class="col-12">
@@ -63,11 +65,11 @@
 									type="file" id="ArticleImage" value="<fmt:message key="article_image"/>" name="ArticleImage" class="form-control">
 							</div>
 						
-						<!-- 내용 -->
+						<!-- 본문 레시피 -->
 						<div class="col-12">
-								<label for="description" class="form-label"><fmt:message key="article_description"/></label> 
+								<label for="description" class="form-label"><fmt:message key="article_recipe"/></label> 
 								<input
-									type="text" id="description" value="<fmt:message key="article_description"/>"name="description" class="form-control" placeholder="내용">
+									type="text" id="recipe" name="recipe" class="form-control">
 							</div>
 							
 							
