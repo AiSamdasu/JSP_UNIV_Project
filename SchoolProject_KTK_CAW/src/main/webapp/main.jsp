@@ -32,6 +32,13 @@
 		<div class="col-md-6">
 				
 				<!-- 여기에 본문 영역 -->
+				<%
+    String id = (String) session.getAttribute("id");
+    String level = (String) session.getAttribute("level");
+%>
+<h2>환영합니다 <%= id %>님</h2>
+<p>등급: <%= level %></p>
+<a href="logoutMember.jsp">로그아웃</a>
 				
 			</div>
 		</div>
