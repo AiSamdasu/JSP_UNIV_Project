@@ -33,7 +33,7 @@
 				
 				<!-- 여기에 본문 영역 -->
 				<%
-    String id = (String) session.getAttribute("id");
+    String id = (String) session.getAttribute("UserName");
     String level = (String) session.getAttribute("level");
 %>
 <h2>환영합니다 <%= id %>님</h2>

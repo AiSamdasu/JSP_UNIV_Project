@@ -1,0 +1,44 @@
+CREATE TABLE FoodList (
+    FoodCode INT PRIMARY KEY,
+    FoodName VARCHAR(50),
+    FoodImg VARCHAR(500),
+    FoodInfo VARCHAR(500),
+    Spicy INT,
+    Sweet INT,
+    Salty INT,
+    Savory INT,
+    Umami INT
+);
+
+CREATE TABLE User(
+    UserCode INT AUTO_INCREMENT PRIMARY KEY, 
+    UserID VARCHAR(50) NOT NULL, 
+    UserPW VARCHAR(50) NOT NULL,
+    UserName VARCHAR(50) NOT NULL,
+    UserAge INT,
+    UserAddress INT
+);
+
+CREATE TABLE UserInfo (
+    UserCode INT PRIMARY KEY,
+    level VARCHAR(10) NOT NULL CHECK (level IN ('nomal', 'admin', 'mid')),
+    CONSTRAINT fk_usercode FOREIGN KEY (UserCode)
+        REFERENCES User(UserCode)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);
+
+
+CREATE TABLE UserTaste (
+    UserCode INT PRIMARY KEY,
+    UserSpicy INT,
+    UserSweet INT,
+    UserSalty INT,
+    UserSavory INT,
+    UserUmami INT,
+    CONSTRAINT fk_usertaste_usercode FOREIGN KEY (UserCode)
+        REFERENCES UserInfo(UserCode)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);
+

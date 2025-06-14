@@ -1,0 +1,22 @@
+INSERT INTO FoodList (FoodCode, FoodName, FoodImg, FoodInfo, Spicy, Sweet, Salty, Savory, Umami)
+VALUES 
+(1001, '김치찌개', '/img/kimchi.jpg', '매콤하고 얼큰한 김치찌개입니다.', 5, 1, 4, 3, 2),
+(1002, '초콜릿 케이크', '/img/choco.jpg', '달콤한 초콜릿 맛의 케이크입니다.', 1, 5, 2, 1, 3);
+-- ① User 테이블
+INSERT INTO User (UserID, UserPW, UserName, UserAge, UserAddress)
+VALUES 
+('hong123', 'pw1234', '홍길동', 25, 12345),
+('kim456', 'pw5678', '김민수', 30, 67890);
+
+-- ② UserInfo 테이블
+INSERT INTO UserInfo (UserCode, level)
+VALUES 
+(1, 'nomal'),
+(2, 'admin');
+
+-- ③ UserTaste 테이블
+INSERT INTO UserTaste (UserCode, UserSpicy, UserSweet, UserSalty, UserSavory, UserUmami)
+VALUES 
+(1, 4, 2, 3, 3, 2),
+(2, 1, 5, 2, 2, 4);
+

@@ -1,7 +1,0 @@
-CREATE TABLE user (
-  id VARCHAR(50) PRIMARY KEY,
-  pw VARCHAR(100) NOT NULL,
-  level VARCHAR(10) NOT NULL CHECK (level IN ('nomal', 'admin', 'mid'))
-);
-
-select * from user;
