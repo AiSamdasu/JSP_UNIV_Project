@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="Util_DB.DBConnection" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="container mt-5">
-
+<%@ include file="../connection.jsp" %>
+	<jsp:include page="/layout/header.jsp" />
 <h2>로그인</h2>
 <form method="post">
     <input type="text" name="userid" placeholder="아이디" class="form-control mb-2" required>
@@ -22,7 +23,6 @@
         String pw = request.getParameter("userpw");
 
         try {
-            Connection conn = DBConnection.getConnection();
 
             String sql = "SELECT User.UserCode, User.UserName, UserInfo.level " +
                     "FROM User JOIN UserInfo ON User.UserCode = UserInfo.UserCode " +
@@ -37,7 +37,8 @@
                 session.setAttribute("UserCode", rs.getInt("UserCode"));
                 session.setAttribute("UserName", rs.getString("UserName"));
                 session.setAttribute("level", rs.getString("level"));  
-                response.sendRedirect("main.jsp");
+                //response.sendRedirect("../main.jsp");
+                response.sendRedirect("../recommend/recommend.jsp");
             } else {
                 out.println("<div class='alert alert-danger mt-3'>아이디 또는 비밀번호 오류</div>");
             }
@@ -48,6 +49,6 @@
         }
     }
 %>
-
+	<jsp:include page="/layout/footer.jsp" />
 </body>
 </html>

@@ -1,17 +1,24 @@
 package KNNRecommend;
 
+
 import java.sql.*;
 import java.util.ArrayList;
-import Util_DB.DBConnection;
 import dto.Food;
 
 public class KNNRecommend {
+    Connection conn = null;
+    String url = "jdbc:mysql://localhost:3306/SchoolProjectJSP";
+    String user = "root";
+    String password = "7482";
+
+
     // 음식 정보 불러오기
     private ArrayList<Food> loadFoodsFromDB() {
         ArrayList<Food> list = new ArrayList<>();
 
         try {
-        	Connection conn = DBConnection.getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(url, user, password);
             String sql = "SELECT * FROM FoodList";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
@@ -42,7 +49,8 @@ public class KNNRecommend {
         int[] taste = new int[5];
 
         try {
-        	Connection conn = DBConnection.getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(url, user, password);
             String sql = "SELECT UserSpicy, UserSweet, UserSalty, UserSavory, UserUmami FROM UserTaste WHERE UserCode = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, userCode);
