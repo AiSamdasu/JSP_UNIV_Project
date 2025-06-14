@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -34,11 +35,11 @@
             ResultSet rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                session.setAttribute("UserCode", rs.getInt("UserCode"));
-                session.setAttribute("UserName", rs.getString("UserName"));
+            	session.setAttribute("userCode", String.valueOf(rs.getInt("UserCode")));
+                session.setAttribute("userName", rs.getString("UserName"));
                 session.setAttribute("level", rs.getString("level"));  
                 //response.sendRedirect("../main.jsp");
-                response.sendRedirect("../recommend/recommend.jsp");
+                response.sendRedirect("../Test.jsp");
             } else {
                 out.println("<div class='alert alert-danger mt-3'>아이디 또는 비밀번호 오류</div>");
             }

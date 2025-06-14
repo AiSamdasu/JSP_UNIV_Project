@@ -42,3 +42,15 @@ CREATE TABLE UserTaste (
         ON DELETE CASCADE
 );
 
+CREATE TABLE LevelRequest (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userCode INT,
+    userLevel VARCHAR(10) CHECK (userLevel IN ('nomal', 'admin', 'mid')),
+    reason TEXT NOT NULL,
+    requestDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_request_user
+        FOREIGN KEY (userCode)
+        REFERENCES UserInfo(UserCode)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);

@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import="KNNRecommend.KNNRecommend" %>
 <%@ page import="java.sql.*, java.util.*" %>
 <%@ include file="../connection.jsp" %>
@@ -49,7 +50,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="container mt-5">
-
+	<jsp:include page="/layout/header.jsp" />
     <h2 class="mb-4">KNN 기반 음식 추천</h2>
 
     <!-- 추천 버튼 -->
@@ -74,5 +75,6 @@
     <% } %>
 
     <a href="../main.jsp" class="btn btn-secondary mt-4">메인으로</a>
+    	<jsp:include page="/layout/footer.jsp" />
 </body>
 </html>

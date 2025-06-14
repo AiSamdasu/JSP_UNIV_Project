@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/Login/SubmitLevelRequest.jsp=UTF-8
 encoding//src/main/webapp/Login/UpdateUserLevel.jsp=UTF-8
+encoding//src/main/webapp/Login/changeLevelProcess.jsp=UTF-8
 encoding//src/main/webapp/Test.jsp=UTF-8
 encoding//src/main/webapp/pointList/Pointmodal.jsp=UTF-8
 encoding//src/main/webapp/resources/bootstrap/bootstrap.jsp=UTF-8

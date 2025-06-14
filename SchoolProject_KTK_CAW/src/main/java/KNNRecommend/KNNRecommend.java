@@ -1,6 +1,5 @@
 package KNNRecommend;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 import dto.Food;
