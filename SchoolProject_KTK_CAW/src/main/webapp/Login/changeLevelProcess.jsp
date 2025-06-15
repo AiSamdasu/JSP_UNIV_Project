@@ -4,8 +4,8 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String userCode = request.getParameter("userCode");   // 신청된 유저코드
-    String newLevel = request.getParameter("level");      // 선택한 새 레벨
+    String userCode = request.getParameter("userCode");   
+    String newLevel = request.getParameter("level");    
 
     PreparedStatement pstmt = null;
 

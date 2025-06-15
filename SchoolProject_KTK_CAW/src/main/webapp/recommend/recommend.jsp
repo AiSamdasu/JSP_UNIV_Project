@@ -13,12 +13,10 @@
 
     int userCode = Integer.parseInt(userCodeStr);
 
-    // 추천 결과 변수
     int foodCode = -1;
     String foodName = "";
     int spicy = 0, sweet = 0, salty = 0, savory = 0, umami = 0;
 
-    // POST 요청 시 추천 실행
     if ("POST".equals(request.getMethod())) {
         try {
             KNNRecommend recommender = new KNNRecommend();
