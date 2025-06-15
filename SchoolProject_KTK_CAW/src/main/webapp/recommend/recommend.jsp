@@ -5,7 +5,7 @@
 <%@ include file="../connection.jsp" %>
 
 <%
-    Integer userCode = (Integer) session.getAttribute("UserCode");
+    Integer userCode = (Integer) session.getAttribute("userCode");
     if (userCode == null) {
         response.sendRedirect("../Login/login.jsp");
         return;
