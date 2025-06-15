@@ -32,7 +32,7 @@
 
         <div class="d-grid gap-3">
             <a href="Login/UpdateUserLevel.jsp" class="btn btn-dark">🔧 관리자 - 회원 등급 변경</a>
-            <a href="../recommend/recommend.jsp" class="btn btn-success">🍽 음식 추천 받기</a>
+            <a href="recommend/recommend.jsp" class="btn btn-success">🍽 음식 추천 받기</a>
             <a href="Login/RequestLevelChange.jsp" class="btn btn-warning">📤 회원 등급 업그레이드 신청</a>
             <a href="recommend/UpdateUserTaste.jsp" class="btn btn-info">🎯 내 맛 선호도 수정</a>
         </div>
